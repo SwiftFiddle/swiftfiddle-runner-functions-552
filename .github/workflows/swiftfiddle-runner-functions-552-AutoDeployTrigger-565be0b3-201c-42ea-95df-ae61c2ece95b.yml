@@ -22,7 +22,7 @@ jobs:
 
     steps:
       - name: Checkout to the branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Azure Login
         uses: azure/login@v2
@@ -41,7 +41,7 @@ jobs:
           registryPassword: ${{ secrets.SWIFTFIDDLERUNNERFUNCTIONS552_REGISTRY_PASSWORD }}
           containerAppName: swiftfiddle-runner-functions-552
           resourceGroup: swiftfiddle
-          imageToBuild: kishikawakatsumi/swiftfiddle-runner-functions-552:${{ github.sha }}
+          imageToBuild: swiftfiddle/swiftfiddle-runner-functions-552:latest
           _buildArgumentsKey_: |
             _buildArgumentsValues_
 
